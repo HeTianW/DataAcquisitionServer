@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92debf8c-5136-4392-b13c-60a906ec9c3b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prototcp/MessageProtocol.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prototcp/MyClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prototcp/MyClientHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prototcp/MyClientInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prototcp/MyMessageDecoder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prototcp/MyMessageEncoder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prototcp/MyServer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prototcp/MyServerHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prototcp/MyServerInitializer.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,11 +43,15 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -47,11 +59,13 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.445977" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\DataAcquisition" />
       <recent name="D:\DataAcquisition\src\main\resources" />
     </key>
   </component>
@@ -67,6 +81,7 @@
       <updated>1591369984127</updated>
       <workItem from="1591369987392" duration="2227000" />
       <workItem from="1591432426356" duration="613000" />
+      <workItem from="1591450369424" duration="763000" />
     </task>
     <servers />
   </component>
@@ -74,13 +89,21 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="499" y="172" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1591371350280">
+    <state x="499" y="172" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1591451055828">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="499" y="172" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1536.834@0.0.1536.834" timestamp="1591371350280" />
-    <state x="249" y="0" key="SettingsEditor" timestamp="1591371352307">
+    <state x="499" y="172" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1536.834@0.0.1536.834" timestamp="1591451055828" />
+    <state x="445" y="158" key="FileChooserDialogImpl" timestamp="1591450864346">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="249" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1591371352307" />
+    <state x="445" y="158" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1591450864346" />
+    <state x="247" y="55" width="996" height="716" key="SettingsEditor" timestamp="1591451124410">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="247" y="55" width="996" height="716" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1591451124410" />
+    <state x="509" y="426" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1591451054936">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="509" y="426" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1536.834@0.0.1536.834" timestamp="1591451054936" />
   </component>
 </project>
