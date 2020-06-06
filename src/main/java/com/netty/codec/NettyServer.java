@@ -35,6 +35,7 @@ public class NettyServer {
                             ChannelPipeline pipeline = ch.pipeline();
                             //在服务端pipeline中加入ProtoBufDecoder：
                             //指定对哪一种对象进行解码
+
                             pipeline.addLast("decoder",new ProtobufDecoder(StudentPOJO.Student.getDefaultInstance()));
                             pipeline.addLast(new NettyServerHandler());
 

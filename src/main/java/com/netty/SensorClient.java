@@ -17,7 +17,7 @@ public class SensorClient extends Frame {
     Thread tRecv = new Thread(new RecvThread());
 
     public static void main(String[] args) {
-        new SensorClient().launchFrame(8888);
+        new SensorClient().launchFrame(6668);
     }
 
     public void launchFrame(int port) {

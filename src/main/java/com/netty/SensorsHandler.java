@@ -1,11 +1,11 @@
 package com.netty;
 
 import io.netty.buffer.ByteBuf;
+import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.util.CharsetUtil;
 
-import java.util.Random;
 
 public class SensorsHandler extends ChannelInboundHandlerAdapter {
 
@@ -14,9 +14,9 @@ public class SensorsHandler extends ChannelInboundHandlerAdapter {
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
 
         //发送数据
-        KTPOJO.KongTiao msg = KTPOJO.KongTiao.newBuilder().setPM(2.4f).setRH(5.8f).build();
-        ctx.writeAndFlush(msg);
-
+//        KTPOJO.KongTiao msg = KTPOJO.KongTiao.newBuilder().setPM(2.4f).setRH(5.8f).build();
+//        ctx.writeAndFlush(msg);
+        ctx.writeAndFlush(Unpooled.copiedBuffer("hello,server", CharsetUtil.UTF_8));
     }
 
     //当通道有读取事件时，会触发

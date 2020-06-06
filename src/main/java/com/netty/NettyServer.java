@@ -5,7 +5,6 @@ import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
-import io.netty.handler.codec.protobuf.ProtobufDecoder;
 
 public class NettyServer {
     public static void main(String[] args) throws Exception{
@@ -30,13 +29,14 @@ public class NettyServer {
                     .option(ChannelOption.SO_BACKLOG,128)   //设置线程队列得到链接的个数
                     .childOption(ChannelOption.SO_KEEPALIVE,true)   //设置保持连接
                     .childHandler(new ChannelInitializer<SocketChannel>() {
+                        //给pipeline设置处理器
                         @Override
                         protected void initChannel(SocketChannel ch) throws Exception {
-                            ChannelPipeline pipeline = ch.pipeline();
-                            //在服务端pipeline中加入ProtoBufDecoder：
-                             pipeline.addLast(new NettyServerHandler());
-                             pipeline.addLast(new NettyServerHandler());
 
+                            System.out.println("客户socketchannel hascode =" + ch.hashCode());
+                            //可以使用一个集合管理SocketChannel，再推送消息时可以将业务加入到各个channel对应的
+                            //NIOEventLoop的TaskQueue或者scheduleQueue
+                            ch.pipeline().addLast(new NettyServerHandler());
                         }
                     }); //给我们的workGroup的EventLoop对应的管道设置处理器
 
@@ -44,7 +44,7 @@ public class NettyServer {
 
             //绑定一个端口并同步，生成了一个ChannelFuture对象
             //启动服务器（并绑定端口）
-            ChannelFuture cf = bootstrap.bind(8888).sync();
+            ChannelFuture cf = bootstrap.bind(6668).sync();
 
             //给cf 注册监听器，监控我们关心的事件
             cf.addListener(new ChannelFutureListener() {

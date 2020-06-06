@@ -1,10 +1,12 @@
 package com.netty;
 
-import com.netty.codec.StudentPOJO;
+import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.util.CharsetUtil;
+
+import java.nio.charset.Charset;
 
 /**
  * 说明
@@ -13,15 +15,18 @@ import io.netty.util.CharsetUtil;
  */
 public class NettyServerHandler extends ChannelInboundHandlerAdapter {
 
+    /**
+     * ChannelHandlerContext:读取客户端发送的消息
+     * @param ctx:上下对象，含有管道pipeline，通道channel，地址
+     * @param msg：客户端发送的数据，默认Object
+     * @throws Exception
+     */
+    @Override
+    public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
 
-    public void channelRead0(ChannelHandlerContext ctx, StudentPOJO.Student msg) throws Exception {
-
-        //读取从客户端发送的StudentPojo.Student
-
-
-        System.out.println(msg);
+        ByteBuf byteBuf = (ByteBuf)msg;
+        System.out.println("msg = " + byteBuf.toString(CharsetUtil.UTF_8));
     }
-
 
     //数据读取完毕
     @Override
@@ -30,7 +35,7 @@ public class NettyServerHandler extends ChannelInboundHandlerAdapter {
         //writeAndFlash ： write+flash
         //将数据写入到缓存并刷新
         //一般我们对这个发送的数据进行编码
-        ctx.writeAndFlush(Unpooled.copiedBuffer("Hello,客户端~", CharsetUtil.UTF_8));
+        ctx.writeAndFlush(Unpooled.copiedBuffer("Hello,客户端~汪1", CharsetUtil.UTF_8));
     }
 
     //处理异常，一般是需要关闭通道
