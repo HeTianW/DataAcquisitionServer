@@ -13,8 +13,7 @@ public class NettyClientHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
 
-        //随机的发送Student 或者 Worker对象
-        int random = new Random().nextInt(3);
+        //发送数据
 
     }
 
