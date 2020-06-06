@@ -3,22 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="92debf8c-5136-4392-b13c-60a906ec9c3b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/netty/NettyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/netty/NettyServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/netty/NettyServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/netty/NettyServerHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/netty/SensorClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/netty/SensorClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/netty/Sensors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/netty/Sensors.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/netty/SensorsHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/netty/SensorsHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/netty/codec/NettyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/netty/codec/NettyServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/netty/NettyServer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/netty/NettyServer$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/netty/NettyServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/netty/NettyServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/netty/NettyServerHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/netty/NettyServerHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/netty/SensorClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/netty/SensorClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/netty/Sensors$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/netty/Sensors$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/netty/Sensors.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/netty/Sensors.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/netty/SensorsHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/netty/SensorsHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/netty/codec/NettyServer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/netty/codec/NettyServer$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/netty/codec/NettyServer$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/netty/codec/NettyServer$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/netty/codec/NettyServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/netty/codec/NettyServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,7 +141,6 @@
       <list>
         <item itemvalue="Application.SensorClient" />
         <item itemvalue="Application.Sensors" />
-        <item itemvalue="Application.NettyServer (2)" />
         <item itemvalue="Application.ChatClient" />
         <item itemvalue="Application.NettyClient (1)" />
       </list>
@@ -177,6 +161,7 @@
       <workItem from="1591450369424" duration="1100000" />
       <workItem from="1591451520694" duration="3269000" />
       <workItem from="1591454949306" duration="2359000" />
+      <workItem from="1591458389334" duration="76000" />
     </task>
     <servers />
   </component>

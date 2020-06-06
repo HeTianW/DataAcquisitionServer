@@ -2,9 +2,6 @@
 
 #### 注意事项：
 
-- 第一次引入项目时记得引入netty库：
-
-  Project Settings - Moudles -Dependencies - 2 Library - io.netty:netty-all
 
 - 另外编译版本为1.8：
 
