@@ -12,3 +12,4 @@
 
 - Project Settings - Project - Project language level - 8
 
+- 若想关闭日志服务： resources - log4j.proporties中的代码注释掉

@@ -10,7 +10,7 @@ import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.codec.protobuf.ProtobufEncoder;
 
-public class NettyClient {
+public class Sensors {
     public static void main(String[] args) throws Exception{
 
         //客户端需要一个事件循环组
@@ -31,7 +31,7 @@ public class NettyClient {
 
                             //在pipeline中加入ProtoBufEncoder
                             pipeline.addLast("encoder",new ProtobufEncoder());
-                            pipeline.addLast(new NettyClientHandler());    //加入自己的处理器
+                            pipeline.addLast(new SensorsHandler());    //加入自己的处理器
                         }
                     });
             System.out.println("客户端 ok...");

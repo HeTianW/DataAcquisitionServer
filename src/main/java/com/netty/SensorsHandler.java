@@ -7,14 +7,15 @@ import io.netty.util.CharsetUtil;
 
 import java.util.Random;
 
-public class NettyClientHandler extends ChannelInboundHandlerAdapter {
+public class SensorsHandler extends ChannelInboundHandlerAdapter {
 
     //当通道就绪时就会触发该方法
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
 
         //发送数据
-
+        KTPOJO.KongTiao msg = KTPOJO.KongTiao.newBuilder().setPM(2.4f).setRH(5.8f).build();
+        ctx.writeAndFlush(msg);
 
     }
 

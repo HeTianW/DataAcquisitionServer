@@ -2,7 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92debf8c-5136-4392-b13c-60a906ec9c3b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/netty/NettyClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/netty/NettyClientHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/netty/ChatClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/netty/KonngTiao.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/netty/NettyServerHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/netty/NettyClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/netty/Sensors.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/netty/NettyClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/netty/SensorsHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/netty/NettyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/netty/NettyServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/netty/codec2/protoc.exe" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/netty/protoc.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/netty/NettyClient$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/netty/NettyClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/netty/NettyClientHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/netty/NettyServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/netty/NettyServer.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +69,9 @@
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\DataAcquisition\src\main\java\com\netty" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.netty" />
       <recent name="com.netty.codec2" />
@@ -69,13 +84,20 @@
       <recent name="D:\DataAcquisition\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.NettyServer (1)">
-    <configuration name="NettyClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.netty.codec.NettyClient" />
+  <component name="RunManager" selected="Application.SensorClient">
+    <configuration name="ChatClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient" />
+      <module name="DataAcquisition" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NettyClient (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.netty.codec2.NettyClient" />
       <module name="DataAcquisition" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.netty.codec.*" />
+          <option name="PATTERN" value="com.netty.codec2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -97,11 +119,24 @@
       </method>
     </configuration>
     <configuration name="NettyServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.netty.codec.NettyServer" />
+      <option name="MAIN_CLASS_NAME" value="com.netty.NettyServer" />
       <module name="DataAcquisition" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.netty.codec.*" />
+          <option name="PATTERN" value="com.netty.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SensorClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.netty.SensorClient" />
+      <module name="DataAcquisition" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.netty.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -111,9 +146,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SensorClient" />
+        <item itemvalue="Application.NettyServer (2)" />
+        <item itemvalue="Application.ChatClient" />
+        <item itemvalue="Application.NettyClient (1)" />
         <item itemvalue="Application.NettyServer (1)" />
-        <item itemvalue="Application.NettyClient" />
-        <item itemvalue="Application.NettyServer" />
       </list>
     </recent_temporary>
   </component>
@@ -130,7 +167,7 @@
       <workItem from="1591369987392" duration="2227000" />
       <workItem from="1591432426356" duration="613000" />
       <workItem from="1591450369424" duration="1100000" />
-      <workItem from="1591451520694" duration="1475000" />
+      <workItem from="1591451520694" duration="3269000" />
     </task>
     <servers />
   </component>
@@ -138,10 +175,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="502" y="220" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1591451956505">
+    <state x="502" y="220" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1591455007739">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="502" y="220" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.834@0.0.1536.834" timestamp="1591451956505" />
+    <state x="502" y="220" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.834@0.0.1536.834" timestamp="1591455007739" />
     <state x="730" y="183" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1591451312390">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -158,26 +195,26 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="630" y="255" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1536.834@0.0.1536.834" timestamp="1591451315340" />
-    <state x="445" y="158" key="FileChooserDialogImpl" timestamp="1591450864346">
+    <state x="445" y="158" key="FileChooserDialogImpl" timestamp="1591453158148">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="445" y="158" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1591450864346" />
-    <state width="1493" height="214" key="GridCell.Tab.0.bottom" timestamp="1591453103507">
+    <state x="445" y="158" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1591453158148" />
+    <state width="1478" height="188" key="GridCell.Tab.0.bottom" timestamp="1591454826972">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="214" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1591453103507" />
-    <state width="1493" height="214" key="GridCell.Tab.0.center" timestamp="1591453103507">
+    <state width="1478" height="188" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1591454826972" />
+    <state width="1478" height="188" key="GridCell.Tab.0.center" timestamp="1591454826972">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="214" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1591453103507" />
-    <state width="1493" height="214" key="GridCell.Tab.0.left" timestamp="1591453103506">
+    <state width="1478" height="188" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1591454826972" />
+    <state width="1478" height="188" key="GridCell.Tab.0.left" timestamp="1591454826972">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="214" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1591453103506" />
-    <state width="1493" height="214" key="GridCell.Tab.0.right" timestamp="1591453103507">
+    <state width="1478" height="188" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1591454826972" />
+    <state width="1478" height="188" key="GridCell.Tab.0.right" timestamp="1591454826972">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="214" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1591453103507" />
+    <state width="1478" height="188" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1591454826972" />
     <state x="247" y="55" width="996" height="716" key="SettingsEditor" timestamp="1591452496485">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
