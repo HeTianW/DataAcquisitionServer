@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92debf8c-5136-4392-b13c-60a906ec9c3b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/netty/ChatClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/netty/KonngTiao.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/netty/NettyServerHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/netty/NettyClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/netty/Sensors.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/netty/NettyClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/netty/SensorsHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/netty/NettyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/netty/NettyServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/netty/codec2/protoc.exe" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/netty/protoc.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/netty/NettyClient$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/netty/NettyClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/netty/NettyClientHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/netty/NettyServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/netty/NettyServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/netty/NettyServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/netty/NettyServerHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,6 +157,7 @@
       <workItem from="1591432426356" duration="613000" />
       <workItem from="1591450369424" duration="1100000" />
       <workItem from="1591451520694" duration="3269000" />
+      <workItem from="1591454949306" duration="230000" />
     </task>
     <servers />
   </component>
@@ -199,22 +189,22 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="445" y="158" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1591453158148" />
-    <state width="1478" height="188" key="GridCell.Tab.0.bottom" timestamp="1591454826972">
+    <state width="1478" height="188" key="GridCell.Tab.0.bottom" timestamp="1591455300314">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1478" height="188" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1591454826972" />
-    <state width="1478" height="188" key="GridCell.Tab.0.center" timestamp="1591454826972">
+    <state width="1478" height="188" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1591455300314" />
+    <state width="1478" height="188" key="GridCell.Tab.0.center" timestamp="1591455300314">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1478" height="188" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1591454826972" />
-    <state width="1478" height="188" key="GridCell.Tab.0.left" timestamp="1591454826972">
+    <state width="1478" height="188" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1591455300314" />
+    <state width="1478" height="188" key="GridCell.Tab.0.left" timestamp="1591455300313">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1478" height="188" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1591454826972" />
-    <state width="1478" height="188" key="GridCell.Tab.0.right" timestamp="1591454826972">
+    <state width="1478" height="188" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1591455300313" />
+    <state width="1478" height="188" key="GridCell.Tab.0.right" timestamp="1591455300314">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1478" height="188" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1591454826972" />
+    <state width="1478" height="188" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1591455300314" />
     <state x="247" y="55" width="996" height="716" key="SettingsEditor" timestamp="1591452496485">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
