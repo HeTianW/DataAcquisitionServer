@@ -1,11 +1,9 @@
-package com.codec2;
+package com.codec;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.util.CharsetUtil;
-
-import java.util.Random;
 
 public class NettyClientHandler extends ChannelInboundHandlerAdapter {
 
@@ -13,19 +11,12 @@ public class NettyClientHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
 
-        //随机的发送Student 或者 Worker对象
-        int random = new Random().nextInt(3);
-        MyDataInfo.MyMessage myMessage = null;
-        if(0 == random){
-            //发送Student对象
-            myMessage = MyDataInfo.MyMessage.newBuilder().setDataType(MyDataInfo.MyMessage.DataType.StudentType).setStudent(
-                    MyDataInfo.Student.newBuilder().setId(5).setName("玉麒麟").build()).build();
-        }else{
-            //发送一个worker对象
-            myMessage = MyDataInfo.MyMessage.newBuilder().setDataType(MyDataInfo.MyMessage.DataType.WorkerType).setWorker(
-                    MyDataInfo.Worker.newBuilder().setName("老李").setAge(20).build()).build();
-        }
-        ctx.writeAndFlush(myMessage);
+//        System.out.println("client "+ctx);
+//        ctx.writeAndFlush(Unpooled.copiedBuffer("hello,server~喵", CharsetUtil.UTF_8));
+
+        //发送一个Student对象到服务器
+        StudentPOJO.Student student = StudentPOJO.Student.newBuilder().setId(4).setName("豹子头").build();
+        ctx.writeAndFlush(student);
     }
 
     //当通道有读取事件时，会触发

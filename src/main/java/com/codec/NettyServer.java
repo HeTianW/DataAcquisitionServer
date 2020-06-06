@@ -1,6 +1,5 @@
-package com.codec2;
+package com.codec;
 
-import com.codec2.StudentPOJO;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
@@ -36,8 +35,7 @@ public class NettyServer {
                             ChannelPipeline pipeline = ch.pipeline();
                             //在服务端pipeline中加入ProtoBufDecoder：
                             //指定对哪一种对象进行解码
-                            pipeline.addLast("decoder",new ProtobufDecoder(
-                                    MyDataInfo.MyMessage.getDefaultInstance()));
+                            pipeline.addLast("decoder",new ProtobufDecoder(StudentPOJO.Student.getDefaultInstance()));
                             pipeline.addLast(new NettyServerHandler());
 
                         }

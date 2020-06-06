@@ -1,6 +1,5 @@
-package com.codec2;
+package com.codec;
 
-import com.codec2.StudentPOJO;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
@@ -11,24 +10,15 @@ import io.netty.util.CharsetUtil;
  * 1、我们自定义一个Handler，需要继承netty绑定好的某个HandlerAdapter（规范）
  * 2、这时我们自定义一个Handler
  */
-public class NettyServerHandler extends SimpleChannelInboundHandler<MyDataInfo.MyMessage> {
+public class NettyServerHandler extends SimpleChannelInboundHandler<StudentPOJO.Student> {
+
     @Override
-    protected void channelRead0(ChannelHandlerContext ctx, MyDataInfo.MyMessage msg) throws Exception {
+    public void channelRead0(ChannelHandlerContext ctx, StudentPOJO.Student msg) throws Exception {
 
-        //根据dataType 来显示不同的信息
+        //读取从客户端发送的StudentPojo.Student
 
-        MyDataInfo.MyMessage.DataType dataType = msg.getDataType();
-        if(dataType == MyDataInfo.MyMessage.DataType.StudentType) {
 
-            MyDataInfo.Student student = msg.getStudent();
-            System.out.println("学生id=" + student.getId() + " 学生名字=" + student.getName());
-
-        } else if(dataType == MyDataInfo.MyMessage.DataType.WorkerType) {
-            MyDataInfo.Worker worker = msg.getWorker();
-            System.out.println("工人的名字=" + worker.getName() + " 年龄=" + worker.getAge());
-        } else {
-            System.out.println("传输的类型不正确");
-        }
+        System.out.println("客户端发送的数据 id=" + msg.getId() + " 名字=" + msg.getName());
     }
 
 
@@ -55,7 +45,7 @@ public class NettyServerHandler extends SimpleChannelInboundHandler<MyDataInfo.M
         //writeAndFlash ： write+flash
         //将数据写入到缓存并刷新
         //一般我们对这个发送的数据进行编码
-        ctx.writeAndFlush(Unpooled.copiedBuffer("Hello,客户端~汪1",CharsetUtil.UTF_8));
+        ctx.writeAndFlush(Unpooled.copiedBuffer("Hello,客户端~汪1", CharsetUtil.UTF_8));
     }
 
     //处理异常，一般是需要关闭通道
