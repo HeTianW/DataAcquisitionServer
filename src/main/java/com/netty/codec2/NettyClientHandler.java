@@ -1,4 +1,4 @@
-package com.netty;
+package com.netty.codec2;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
@@ -13,9 +13,19 @@ public class NettyClientHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
 
-        //发送数据
-
-
+        //随机的发送Student 或者 Worker对象
+        int random = new Random().nextInt(3);
+        MyDataInfo.MyMessage myMessage = null;
+        if(0 == random){
+            //发送Student对象
+            myMessage = MyDataInfo.MyMessage.newBuilder().setDataType(MyDataInfo.MyMessage.DataType.StudentType).setStudent(
+                    MyDataInfo.Student.newBuilder().setId(5).setName("玉麒麟").build()).build();
+        }else{
+            //发送一个worker对象
+            myMessage = MyDataInfo.MyMessage.newBuilder().setDataType(MyDataInfo.MyMessage.DataType.WorkerType).setWorker(
+                    MyDataInfo.Worker.newBuilder().setName("老李").setAge(20).build()).build();
+        }
+        ctx.writeAndFlush(myMessage);
     }
 
     //当通道有读取事件时，会触发
