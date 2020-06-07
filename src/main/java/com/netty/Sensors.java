@@ -28,7 +28,7 @@ public class Sensors {
                         @Override
                         protected void initChannel(SocketChannel ch) throws Exception {
                             ChannelPipeline pipeline = ch.pipeline();
-
+                            pipeline.addLast("encoder",new ProtobufEncoder());
                             pipeline.addLast(new SensorsHandler());    //加入自己的处理器
                         }
                     });
