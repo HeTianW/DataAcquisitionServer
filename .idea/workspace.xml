@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92debf8c-5136-4392-b13c-60a906ec9c3b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/netty/MQTTClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +80,7 @@
       <recent name="D:\DataAcquisition\src\main\java\com\netty" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Sensors">
+  <component name="RunManager" selected="Application.MQTTClient">
     <configuration name="ChatClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ChatClient" />
       <module name="DataAcquisition" />
@@ -85,12 +88,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NettyClient (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.netty.codec2.NettyClient" />
-      <module name="DataAcquisition" />
+    <configuration name="MQTTClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.netty.MQTTClient" />
+      <module name="DataAcquisitionServer" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.netty.codec2.*" />
+          <option name="PATTERN" value="com.netty.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -138,11 +141,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MQTTClient" />
         <item itemvalue="Application.Sensors" />
         <item itemvalue="Application.NettyServer" />
         <item itemvalue="Application.SensorClient" />
         <item itemvalue="Application.ChatClient" />
-        <item itemvalue="Application.NettyClient (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -161,7 +164,8 @@
       <workItem from="1591450369424" duration="1100000" />
       <workItem from="1591451520694" duration="3269000" />
       <workItem from="1591454949306" duration="2359000" />
-      <workItem from="1591458389334" duration="982000" />
+      <workItem from="1591458389334" duration="1184000" />
+      <workItem from="1591511034466" duration="3111000" />
     </task>
     <servers />
   </component>
@@ -205,26 +209,26 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="445" y="158" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1591453158148" />
-    <state width="1493" height="190" key="GridCell.Tab.0.bottom" timestamp="1591458845388">
+    <state width="1493" height="421" key="GridCell.Tab.0.bottom" timestamp="1591519260640">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="190" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1591458845388" />
-    <state width="1493" height="190" key="GridCell.Tab.0.center" timestamp="1591458845387">
+    <state width="1493" height="421" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1591519260640" />
+    <state width="1493" height="421" key="GridCell.Tab.0.center" timestamp="1591519260640">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="190" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1591458845387" />
-    <state width="1493" height="190" key="GridCell.Tab.0.left" timestamp="1591458845386">
+    <state width="1493" height="421" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1591519260640" />
+    <state width="1493" height="421" key="GridCell.Tab.0.left" timestamp="1591519260640">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="190" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1591458845386" />
-    <state width="1493" height="190" key="GridCell.Tab.0.right" timestamp="1591458845388">
+    <state width="1493" height="421" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1591519260640" />
+    <state width="1493" height="421" key="GridCell.Tab.0.right" timestamp="1591519260640">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="190" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1591458845388" />
-    <state x="162" y="118" width="996" height="716" key="SettingsEditor" timestamp="1591458935440">
+    <state width="1493" height="421" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1591519260640" />
+    <state x="162" y="118" width="996" height="716" key="SettingsEditor" timestamp="1591518823019">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="162" y="118" width="996" height="716" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1591458935440" />
+    <state x="162" y="118" width="996" height="716" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1591518823019" />
     <state x="509" y="426" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1591451308724">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

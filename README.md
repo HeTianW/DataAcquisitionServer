@@ -3,7 +3,7 @@
 #### 注意事项：
 
 
-- 另外编译版本为1.8：
+- 编译版本为1.8：
 
   Settings 搜索JavaCompiler - Target bytecode version - 1.8
 
@@ -20,3 +20,4 @@
 
 - com.netty.SensorsClient:传感器客户端
 
+- 注意每次引入依赖后编译版本都会改变，记得改回来
