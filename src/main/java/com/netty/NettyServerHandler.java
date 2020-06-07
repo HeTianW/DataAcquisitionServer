@@ -1,19 +1,18 @@
 package com.netty;
 
-import io.netty.buffer.ByteBuf;
+
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerContext;
-import io.netty.channel.ChannelInboundHandlerAdapter;
+import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.util.CharsetUtil;
 
-import java.nio.charset.Charset;
 
 /**
  * 说明
  * 1、我们自定义一个Handler，需要继承netty绑定好的某个HandlerAdapter（规范）
  * 2、这时我们自定义一个Handler
  */
-public class NettyServerHandler extends ChannelInboundHandlerAdapter {
+public class NettyServerHandler extends SimpleChannelInboundHandler<SensorsDataPOJO.Data> {
 
     /**
      * ChannelHandlerContext:读取客户端发送的消息
@@ -22,10 +21,15 @@ public class NettyServerHandler extends ChannelInboundHandlerAdapter {
      * @throws Exception
      */
     @Override
-    public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
+    public void channelRead0(ChannelHandlerContext ctx, SensorsDataPOJO.Data msg) throws Exception {
 
-        ByteBuf byteBuf = (ByteBuf)msg;
-        System.out.println("msg = " + byteBuf.toString(CharsetUtil.UTF_8));
+        System.out.println("msg.getFEV1() = " + msg.getFEV1());
+        System.out.println("msg.getFVC() = " + msg.getFVC());
+        System.out.println("msg.getPEF() = " + msg.getPEF());
+        System.out.println("msg.getPM() = " + msg.getPM());
+        System.out.println("msg.getRH() = " + msg.getRH());
+        System.out.println("msg.getSAO2() = " + msg.getSAO2());
+        System.out.println("msg.getVT() = " + msg.getVT());
     }
 
     //数据读取完毕

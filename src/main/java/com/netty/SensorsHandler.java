@@ -100,7 +100,6 @@ public class SensorsHandler extends ChannelInboundHandlerAdapter {
 
         frame.setVisible(true);
 
-        ctx.writeAndFlush(Unpooled.copiedBuffer("hello,server", CharsetUtil.UTF_8));
         sendHeartbeat(ctx);
     }
 

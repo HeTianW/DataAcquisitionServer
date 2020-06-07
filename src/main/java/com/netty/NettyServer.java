@@ -5,6 +5,7 @@ import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
+import io.netty.handler.codec.protobuf.ProtobufDecoder;
 
 public class NettyServer {
     public static void main(String[] args) throws Exception{
@@ -34,9 +35,12 @@ public class NettyServer {
                         protected void initChannel(SocketChannel ch) throws Exception {
 
                             System.out.println("客户socketchannel hascode =" + ch.hashCode());
-                            //可以使用一个集合管理SocketChannel，再推送消息时可以将业务加入到各个channel对应的
-                            //NIOEventLoop的TaskQueue或者scheduleQueue
-                            ch.pipeline().addLast(new NettyServerHandler());
+                            ChannelPipeline pipeline = ch.pipeline();
+                            //在服务端pipeline中加入ProtoBufDecoder：
+                            //指定对哪一种对象进行解码
+                            pipeline.addLast("decoder",new ProtobufDecoder(
+                                    SensorsDataPOJO.Data.getDefaultInstance()));
+                            pipeline.addLast(new NettyServerHandler());
                         }
                     }); //给我们的workGroup的EventLoop对应的管道设置处理器
 
