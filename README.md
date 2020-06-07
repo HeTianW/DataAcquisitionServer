@@ -18,6 +18,6 @@
 
 - com.netty.NettyServer:Netty服务端
 
-- com.netty.SensorsClient:传感器客户端
+- com.netty.Sensors/SensorHandler:传感器客户端
 
 - 注意每次引入依赖后编译版本都会改变，记得改回来
