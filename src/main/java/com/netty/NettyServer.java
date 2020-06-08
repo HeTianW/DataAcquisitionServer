@@ -34,7 +34,6 @@ public class NettyServer {
                         @Override
                         protected void initChannel(SocketChannel ch) throws Exception {
 
-                            System.out.println("客户socketchannel hascode =" + ch.hashCode());
                             ChannelPipeline pipeline = ch.pipeline();
                             //在服务端pipeline中加入ProtoBufDecoder：
                             //指定对哪一种对象进行解码
@@ -65,6 +64,7 @@ public class NettyServer {
             cf.channel().closeFuture().sync();
         } finally {
             bossGroup.shutdownGracefully(); //优雅地关闭
+            workerGroup.shutdownGracefully();
         }
 
     }

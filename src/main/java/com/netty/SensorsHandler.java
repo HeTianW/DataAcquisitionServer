@@ -44,10 +44,10 @@ public class SensorsHandler extends ChannelInboundHandlerAdapter {
 //        KTPOJO.KongTiao msg = KTPOJO.KongTiao.newBuilder().setPM(2.4f).setRH(5.8f).build();
 //        ctx.writeAndFlush(msg);
 
-        Frame frame=new Frame();
+        Frame frame=new Frame("传感器");
         frame.setLocation(400, 300);
         frame.setLayout(new GridLayout(4,6,10,10));
-        frame.setSize(300, 200);
+        frame.setSize(400, 300);
         frame.add(label1);
         frame.add(PEF);
         frame.add(label2);
@@ -100,7 +100,7 @@ public class SensorsHandler extends ChannelInboundHandlerAdapter {
 
         frame.setVisible(true);
 
-        sendHeartbeat(ctx);
+//        sendHeartbeat(ctx);
     }
 
     //当通道有读取事件时，会触发
@@ -121,24 +121,24 @@ public class SensorsHandler extends ChannelInboundHandlerAdapter {
     /**
      * 发送心跳包
      */
-    public static void sendHeartbeat(final ChannelHandlerContext ctx) {
-        try {
-            final String heartbeat = "heart:alive";
-            new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    while (true) {
-                        try {
-                            Thread.sleep(10 * 1000);// 10s发送一次心跳
-                            ctx.writeAndFlush(Unpooled.copiedBuffer(heartbeat, CharsetUtil.UTF_8));
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }
-            }).start();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+//    public static void sendHeartbeat(final ChannelHandlerContext ctx) {
+//        try {
+//            final String heartbeat = "heart:alive";
+//            new Thread(new Runnable() {
+//                @Override
+//                public void run() {
+//                    while (true) {
+//                        try {
+//                            Thread.sleep(10 * 1000);// 10s发送一次心跳
+//                            ctx.writeAndFlush(Unpooled.copiedBuffer(heartbeat, CharsetUtil.UTF_8));
+//                        } catch (Exception e) {
+//                            e.printStackTrace();
+//                        }
+//                    }
+//                }
+//            }).start();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//    }
 }

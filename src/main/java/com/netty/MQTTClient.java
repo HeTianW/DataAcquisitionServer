@@ -1,6 +1,8 @@
 package com.netty;
 
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import org.eclipse.paho.client.mqttv3.*;
 import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
 
@@ -41,25 +43,9 @@ public class MQTTClient extends JFrame implements ActionListener{
 
 
     /**
-     * Launch the application.
-     */
-    public static void main(String[] args) {
-        EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                try {
-                    MQTTClient frame = new MQTTClient();
-                    frame.setVisible(true);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-    }
-
-    /**
      * Create the frame.
      */
-    public MQTTClient() {
+    public MQTTClient(JSONObject jsonObject) {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 484, 419);
         setTitle("MQTT客户端");
@@ -84,7 +70,7 @@ public class MQTTClient extends JFrame implements ActionListener{
         contentPane.add(lblNewLabel);
 
         username= new JFormattedTextField();
-        username.setText("chenbo");
+        username.setText("gorgor");
         username.setBounds(139, 38, 99, 21);
         contentPane.add(username);
 
@@ -109,7 +95,7 @@ public class MQTTClient extends JFrame implements ActionListener{
         contentPane.add(label);
 
         toptic_input= new JFormattedTextField();
-        toptic_input.setText("info");
+        toptic_input.setText("/sensorsData");
         toptic_input.setBounds(139, 108, 99, 21);
         contentPane.add(toptic_input);
 
@@ -139,7 +125,7 @@ public class MQTTClient extends JFrame implements ActionListener{
         contentPane.add(label_2);
 
         toptic_titile= new JFormattedTextField();
-        toptic_titile.setText("test");
+        toptic_titile.setText("/sensorsData");
         toptic_titile.setBounds(139, 148, 99, 21);
         contentPane.add(toptic_titile);
 
@@ -166,6 +152,7 @@ public class MQTTClient extends JFrame implements ActionListener{
         contentPane.add(scrollPane);
 
         msgtextArea = new JTextArea();
+        msgtextArea.setText(JSON.toJSONString(jsonObject));
         scrollPane.setViewportView(msgtextArea);
 
         err_infoText = new JLabel("");
@@ -290,6 +277,8 @@ public class MQTTClient extends JFrame implements ActionListener{
             } catch (MqttException e1) {
                 e1.printStackTrace();
                 err_infoText.setText(e1.getMessage());
+            }finally {
+                this.setVisible(false);
             }
 
         }else if(command.equals("clear")){
