@@ -8,12 +8,12 @@ import java.sql.*;
 public class JDBCUtils
 {
 
-    private static String c_url = "jdbc:mysql://49.235.73.29:3306/testdb?serverTimezone=Asia/Shanghai";
+    private static String c_url = "jdbc:mysql://129.211.85.53:3306/mdb?useSSL=false&serverTimezone=UTC&useUnicode=true&characterEncoding=utf8";
     private static String c_user = "root";
-    private static String c_password = "skplroot";
+    private static String c_password = "mySQL2020,";
     private static Connection connection;
 
-    /*
+    /**
      * @Description: 创建连接：连接mytest数据库
      * @Param
      * @Return: java.sql.Connection
@@ -37,7 +37,7 @@ public class JDBCUtils
         return connection;
     }
 
-    /*
+    /**
      * @Description:  关闭资源函数：由于按照Connection、Statement、ResultSet的顺序创建，所以要从后面开始关闭
      * @Param resultSet  statement  connection
      * @Return: void
