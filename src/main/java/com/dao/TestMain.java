@@ -1,5 +1,9 @@
 package com.dao;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
+import com.bean.User;
+import com.utils.ClientUtils;
 import com.utils.JDBCUtils;
 
 import java.sql.Connection;
@@ -10,36 +14,10 @@ import java.sql.SQLException;
 public class TestMain {
 
     public static void main(String args[]){
-        Connection con;
-        PreparedStatement pStmt;
-        ResultSet rs;
-        String sql;
-        con = null;
-        pStmt = null;
-        rs = null;
-        try
-        {
-            con = JDBCUtils.getConnection();
-            sql = "SELECT * FROM user u WHERE u_id = ? ";
-            pStmt = con.prepareStatement(sql);
-
-            //替换参数，从1开始
-            pStmt.setString(1, "1");
-            rs = pStmt.executeQuery();
-
-            if (rs.next())
-            {
-                System.out.println(rs.getString("u_name"));
-            }
-        }
-        catch (SQLException e)
-        {
-            e.printStackTrace();
-        }
-        finally
-        {
-            JDBCUtils.closeAll(rs, pStmt, con);
-        }
-
+        int ret = ClientUtils.login("333","000");
+        System.out.println("登陆结果："+ret);
+        User user = ClientUtils.getUser("333");
+        assert user != null;
+        System.out.println("用户名："+user.getU_name());
     }
 }
