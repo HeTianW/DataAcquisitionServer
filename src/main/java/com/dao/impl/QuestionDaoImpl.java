@@ -91,4 +91,54 @@ public class QuestionDaoImpl implements QuestionDao {
         }
         return flag;
     }
+
+    public Questionnaire getLatestQs(String tel){
+        //初始化
+        con = null;
+        pStmt = null;
+        rs = null;
+        int id = 0;
+        String df = null;
+        String trainning = null;
+        String onset = null;
+        Date date=new Date(0,0,0);
+        Questionnaire q = null;
+        try
+        {
+            con = JDBCUtils.getConnection();
+            sql = "SELECT * FROM questionnaire WHERE u_id =(select u_id from user where u_tel=?)";
+            pStmt = con.prepareStatement(sql);
+
+            pStmt.setString(1, tel);
+            rs = pStmt.executeQuery();
+
+            while (rs.next())
+            {
+                if(rs.getDate("q_date").compareTo(date)==1){
+                    date=rs.getDate("q_date");
+                    id=rs.getInt("u_id");
+                    df=rs.getString("q_drugfreq");
+                    trainning=rs.getString("q_training");
+                    onset=rs.getString("q_onsettimes");
+                }
+
+            }
+
+            q = new Questionnaire();
+            q.setU_id(id);
+            q.setQ_date(date);
+            q.setQ_drugfreqt(df);
+            q.setQ_training(trainning);
+            q.setQ_onsettimes(onset);
+        }
+        catch (SQLException e)
+        {
+            e.printStackTrace();
+        }
+        finally
+        {
+            JDBCUtils.closeAll(rs, pStmt, con);
+        }
+        return q;
+    }
 }

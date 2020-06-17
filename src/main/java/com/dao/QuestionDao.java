@@ -19,4 +19,5 @@ public interface QuestionDao
 
     int newQuestionnaire(Questionnaire q);
     int newQuestionnaire(String tel, java.util.Date date, String drugfreq, String training, String onset);
+    Questionnaire getLatestQs(String tel);
 }

@@ -138,8 +138,6 @@ public class User {
     }
 
     public String toJsonString(){
-        JSONObject jsonObject = new JSONObject();
-        jsonObject.put("User",this);
-        return jsonObject.toString();
+        return JSONObject.toJSON(this).toString();
     }
 }

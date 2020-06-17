@@ -49,7 +49,7 @@ public class mySQL {
     public int setHeight(String tel, int height){
         return ud.setUserHeight(tel,height);
     }
-    public int setWeight(String tel, int weight){
+    public int setWeight(String tel, double weight){
         return ud.setUserWeight(tel,weight);
     }
     public int setBloodtype(String tel, String btype){
@@ -59,11 +59,19 @@ public class mySQL {
     public int insertQsnaire(String tel, Date date,String drugfreq,String training,String onset){
         return qd.newQuestionnaire(tel,date,drugfreq,training,onset);
     }
+    public int updateQuestionnaire(Questionnaire q){
+        return qd.newQuestionnaire(q);
+    }
 
     public int insertMsg(String tel,java.util.Date date, String subject, String content){
         return md.newMsg(tel,date,subject,content);
     }
+
     public List<Msg> getMsgList(String tel){
         return md.getMsgList(tel);
+    }
+
+    public Questionnaire getQuestionnaire(String tel) {
+        return qd.getLatestQs(tel);
     }
 }
