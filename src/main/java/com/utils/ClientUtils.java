@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ClientUtils {
-    private static final String hostname = "127.0.0.1";
+    private static final String hostname = "diker.xyz";
     private static final int port = 2020;
     private static Socket socket;
     private static String readline;
